@@ -18,8 +18,8 @@ private lateinit var binding: FragmentNewStudentBinding
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        binding = FragmentNewStudentBinding.inflate(inflater)
-//        return binding.root
+        binding = FragmentNewStudentBinding.inflate(inflater)
+        return binding.root
     }
 
 
