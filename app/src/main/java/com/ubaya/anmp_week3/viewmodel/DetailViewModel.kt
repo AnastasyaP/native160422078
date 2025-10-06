@@ -17,6 +17,9 @@ class DetailViewModel(app:Application):AndroidViewModel(app) {
     val TAG = "volleytag" // digunakan unutk membatalkan volley klo lagi berjalan
     private var queue: RequestQueue? = null
 
+    fun update(){
+        // diisi code untuk simpan studentLD object ke server, codenya pakai volley
+    }
     fun fetch(id:String){
 //        val data = arrayListOf(
 //            Student("16055","Nonie","1998/03/28","5718444778","http://dummyimage.com/75x100"
