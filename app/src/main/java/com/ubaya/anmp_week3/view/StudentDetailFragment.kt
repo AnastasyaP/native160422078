@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.ubaya.anmp_week3.R
@@ -30,8 +31,8 @@ private lateinit var student:Student
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // baca id student lalu panggil fetch viewmodel untuk load data student tersebut
         val id = StudentDetailFragmentArgs.fromBundle(requireArguments()).id // untuk membaca id yg didapatkan
-
         viewmodel = ViewModelProvider(this).get(DetailViewModel::class.java)
         viewmodel.fetch(id)
 
@@ -42,6 +43,7 @@ private lateinit var student:Student
         // observe - live data - student
         viewmodel.studentLD.observe(viewLifecycleOwner, Observer{
             student = it
+            Toast.makeText(context, "Data loaded", Toast.LENGTH_SHORT).show()
 
             // update UI
             binding.txtID.setText(student.id)
