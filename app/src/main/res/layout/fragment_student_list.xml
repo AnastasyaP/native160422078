@@ -18,19 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="650dp"
-            android:clickable="true"
-            android:src="@drawable/baseline_add_24"
-            app:layout_constraintBottom_toTopOf="@+id/refreshLayout"
-            app:layout_constraintEnd_toStartOf="@+id/refreshLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recViewStudent"
             android:layout_width="0dp"
@@ -59,6 +46,16 @@
             app:layout_constraintEnd_toEndOf="@+id/recViewStudent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recViewStudent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
